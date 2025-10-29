@@ -17,8 +17,10 @@ export type Testimonial = {
 
   // image (either uploaded to IndexedDB, or dataURL for small images)
   image?: {
-    src?: string;                 // for remote (future)
+    id?: string;
+    url?: string;                 // for remote (future)
     alt?: string;
+    provider?: string;
     dataUrl?: string;             // local preview (small~medium)
     blobId?: string;              // id if stored as blob in IndexedDB
   };
@@ -26,6 +28,7 @@ export type Testimonial = {
   // video (either URL or uploaded blob)
   video?: {
     type: 'embed' | 'file';
+    provider?: string;
     src: string;                  // URL or blobId (when type='file')
     poster?: string;              // external poster
     posterDataUrl?: string;       // locally stored thumbnail
