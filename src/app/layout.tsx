@@ -35,8 +35,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // SSR: read theme so server HTML matches client HTML (prevents hydration mismatch)
-  const cookieTheme =
-    (cookies().get('theme')?.value as 'light' | 'dark' | undefined) ?? 'light'
+  const cookieTheme = 'light' // or 'dark' — default theme
+
   return (
     <html
       lang="en"

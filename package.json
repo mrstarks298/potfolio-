@@ -15,12 +15,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+      "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "devDependencies": {
     "@types/node": "24.7.1",
     "@types/react": "19.2.2",
     "@types/tailwindcss": "^3.0.11",
+    "gh-pages": "^6.3.0",
     "typescript": "5.9.3"
   }
 }
